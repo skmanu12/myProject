@@ -1,0 +1,26 @@
+mvn test verify -Dcucumber.option="--tags @AddPlace"
+mvn test verify -Dcucumber.option="--glue stepDefinations"
+mvn test verify -Dcucumber.option="src/test/java/features/Guest_User_End_To_End_New_Reservations_For_Microsites.feature"
+
+//Passing multiple parameter from commandLine	
+mvn test -Dcucumber.options="src/test/resources/features/CucumberTagsExample.feature" 
+-Dcucumber.option="--tags @AddPlace"
+
+
+//Git commands
+Branches
+git checkout -b develope
+git add *
+git commit
+git branch
+git push origin develope
+
+git pull origin develope
+
+merge the branch
+switch to master
+git checkout master
+git merge develope
+
+// Merge Conflict
+
