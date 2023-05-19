@@ -1,0 +1,5 @@
+What is Hooks?
+Ans: Hooks are blocks of code that can run at various points in the Cucumber execution cycle. 
+They are typically used for setup and teardown of the environment before and after each scenario. 
+Where a hook is defined has no impact on what scenarios or steps it is run for.
+

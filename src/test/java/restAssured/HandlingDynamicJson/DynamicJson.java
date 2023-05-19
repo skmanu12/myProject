@@ -20,7 +20,8 @@ public class DynamicJson {
 				.body(Payloads.addBook(isbn, aisle)).log().all().when()
 				.post("/Library/Addbook.php").then().log().all()
 				.assertThat().statusCode(200).extract().response();
-		JsonPath js1 = ReUsables.getJsonPath(addBookResponse.asString());
+		JsonPath js1=new JsonPath(addBookResponse.asString());
+		//JsonPath js1 = ReUsables.getJsonPath(addBookResponse.asString());
 		Assert.assertEquals(js1.get("Msg"), "successfully added");
 		System.out.println(js1.get("ID"));
 		System.out.println(js1.get("ID"));
@@ -31,6 +32,10 @@ public class DynamicJson {
 	@DataProvider
 	public Object[][] getData() {
 		return new Object[][] { { "isbn", "1234" }, { "isbn1", "3214" } };
+	}
+	@DataProvider
+	public Object[][] getData1() {
+		return new Object[][] {{"isbn1","12334"},{"isbn2","4321"}};
 	}
 
 }

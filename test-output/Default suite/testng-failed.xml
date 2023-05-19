@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="restAssured.eCommerce.ECommerce">
+      <class name="restAssured.PojoClassTests.DeserializeOAuth2o2">
         <methods>
-          <include name="getEcommerceProducts"/>
+          <include name="getCourses"/>
         </methods>
-      </class> <!-- restAssured.eCommerce.ECommerce -->
+      </class> <!-- restAssured.PojoClassTests.DeserializeOAuth2o2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

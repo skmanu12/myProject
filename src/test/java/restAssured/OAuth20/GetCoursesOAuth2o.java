@@ -24,7 +24,7 @@ public class GetCoursesOAuth2o {
 		 * ); String url=driver.getCurrentUrl(); System.out.println(url);
 		 */
 
-		String url = "https://rahulshettyacademy.com/getCourse.php?state=verify&code=4%2F0AWtgzh4LEiW-YeO3-afB52m0QfJ6gB1J6pPzy8uLA77spFFYVqkNw5nhpMZpRNVCsgGqZQ&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none";
+		String url = "https://rahulshettyacademy.com/getCourse.php?state=verify&code=4%2F0AVHEtk7lm_8-L15oEjkNcLcvyhlKbDs-nXNe9W3Ec9pgbaJr0OO69qWfnY0I4uhFcLy4Kw&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=none";
 
 		String code = url.split("code=")[1].split("&scope")[0].trim();
 		System.out.println(code);

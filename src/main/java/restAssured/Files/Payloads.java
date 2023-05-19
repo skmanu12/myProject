@@ -18,15 +18,32 @@ public class Payloads {
 				+ "{\r\n" + "\"title\": \"RPA\",\r\n" + "\"price\": 45,\r\n" + "\"copies\": 10\r\n" + "}\r\n" + "]\r\n"
 				+ "}\r\n" + "";
 	}
-	
-	public static String addBook(String isbn,String aisle) {
-		return "{\r\n"
-				+ "\r\n"
-				+ "\"name\":\"Learn Appium Automation with Java\",\r\n"
-				+ "\"isbn\":\""+isbn+"\",\r\n"
-				+ "\"aisle\":\""+aisle+"\",\r\n"
-				+ "\"author\":\"John foe\"\r\n"
-				+ "}\r\n"
-				+ "";
+
+	public static String coursePrice1() {
+		return "{\r\n" + "\"dashboard\": {\r\n" + "\"purchaseAmount\": 910,\r\n"
+				+ "\"website\": \"rahulshettyacademy.com\"\r\n" + "},\r\n" + "\"courses\": [\r\n" + "{\r\n"
+				+ "\"title\": \"Selenium Python\",\r\n" + "\"price\": 50,\r\n" + "\"copies\": 6\r\n" + "},\r\n"
+				+ "{\r\n" + "\"title\": \"Cypress\",\r\n" + "\"price\": 40,\r\n" + "\"copies\": 4\r\n" + "},\r\n"
+				+ "{\r\n" + "\"title\": \"RPA\",\r\n" + "\"price\": 45,\r\n" + "\"copies\": 10\r\n" + "}\r\n" + "]\r\n"
+				+ "}\r\n" + "";
+
+	}
+
+	public static String addBook(String isbn, String aisle) {
+		return "{\r\n" + "\r\n" + "\"name\":\"Learn Appium Automation with Java\",\r\n" + "\"isbn\":\"" + isbn
+				+ "\",\r\n" + "\"aisle\":\"" + aisle + "\",\r\n" + "\"author\":\"John foe\"\r\n" + "}\r\n" + "";
+	}
+
+	public static String getStatus() {
+		return "[\r\n" + "  {\r\n" + "    \"id\": 9223372036854246000,\r\n" + "    \"category\": {\r\n"
+				+ "      \"id\": 0,\r\n" + "      \"name\": \"string\"\r\n" + "    },\r\n"
+				+ "    \"name\": \"fish\",\r\n" + "    \"photoUrls\": [\r\n" + "      \"string\"\r\n" + "    ],\r\n"
+				+ "    \"tags\": [\r\n" + "      {\r\n" + "        \"id\": 0,\r\n" + "        \"name\": \"string\"\r\n"
+				+ "      }\r\n" + "    ],\r\n" + "    \"status\": \"pending\"\r\n" + "  },\r\n" + "  {\r\n"
+				+ "    \"id\": 9223372036854246000,\r\n" + "    \"category\": {\r\n" + "      \"id\": 0,\r\n"
+				+ "      \"name\": \"string\"\r\n" + "    },\r\n" + "    \"name\": \"gggg\",\r\n"
+				+ "    \"photoUrls\": [\r\n" + "      \"string\"\r\n" + "    ],\r\n" + "    \"tags\": [\r\n"
+				+ "      {\r\n" + "        \"id\": 0,\r\n" + "        \"name\": \"string\"\r\n" + "      }\r\n"
+				+ "    ],\r\n" + "    \"status\": \"available\"\r\n" + "  }\r\n" + "]";
 	}
 }

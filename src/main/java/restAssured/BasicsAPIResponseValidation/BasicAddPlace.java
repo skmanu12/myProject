@@ -17,11 +17,20 @@ public class BasicAddPlace {
 		// TODO Auto-generated method stub
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 		Response addResponse = given().log().all().header("Content-Type", "application/json")
-				.queryParam("key", "qaclick123").body(Payloads.addPlace()).when().post("/maps/api/place/add/json")
-				.then().body("scope", equalTo("APP"), "status", equalTo("OK"))
-				.header("Server", "Apache/2.4.41 (Ubuntu)").log().all().assertThat().statusCode(200).extract()
+				.queryParam("key", "qaclick123")
+				.body(Payloads.addPlace())
+				.when()
+				.post("/maps/api/place/add/json")
+				.then()
+				.body("scope", equalTo("APP"), "status", equalTo("OK"))
+				.header("Server", "Apache/2.4.41 (Ubuntu)")
+				.log()
+				.all()
+				.assertThat()
+				.statusCode(200)
+				.extract()
 				.response();
-
+		//addResponse.path("");
 		JsonPath js = ReUsables.getJsonPath(addResponse.asString());
 		Assert.assertEquals(js.get("status"), "OK");
 		Assert.assertEquals(js.get("scope"), "APP");

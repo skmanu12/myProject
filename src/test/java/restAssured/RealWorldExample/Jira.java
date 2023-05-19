@@ -67,7 +67,8 @@ public class Jira {
 
 				.header("Content-Type", "multipart/form-data")
 
-				.multiPart("file", new File("jira.txt")).when().
+				.multiPart("file", new File("jira.txt")).multiPart("File",new File("")).when().
+				
 
 				post("rest/api/2/issue/{key}/attachments").then().log().all().assertThat().statusCode(200);
 

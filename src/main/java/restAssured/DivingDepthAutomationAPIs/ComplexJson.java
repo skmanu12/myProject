@@ -1,6 +1,7 @@
 package restAssured.DivingDepthAutomationAPIs;
 
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import junit.framework.Assert;
 import restAssured.Files.Payloads;
 
@@ -19,7 +20,7 @@ public class ComplexJson {
 		System.out.println(puchaseAmount);
 		String websiteName = js.get("dashboard.website");
 		System.out.println(websiteName);
-
+		
 		int size = js.getInt("courses.size()");
 		// 3. Print Title of the first course
 		String firstCourse = js.get("courses[0].title");
@@ -49,7 +50,7 @@ public class ComplexJson {
 
 		}
 		System.out.println(sum);
-		
+
 	}
 
 }

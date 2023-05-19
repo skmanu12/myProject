@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-09T11:42:16 IST" name="Default suite" finished-at="2023-02-09T11:42:18 IST" duration-ms="1941">
+  <suite started-at="2023-05-17T12:50:04 IST" name="Default suite" finished-at="2023-05-17T12:50:08 IST" duration-ms="3384">
     <groups>
     </groups>
-    <test started-at="2023-02-09T11:42:16 IST" name="Default test" finished-at="2023-02-09T11:42:18 IST" duration-ms="1941">
-      <class name="QAs.ResponseTimeValidation">
-        <test-method signature="responseTime()[pri:0, instance:QAs.ResponseTimeValidation@506ae4d4]" started-at="2023-02-09T11:42:16 IST" name="responseTime" finished-at="2023-02-09T11:42:18 IST" duration-ms="1888" status="PASS">
+    <test started-at="2023-05-17T12:50:04 IST" name="Default test" finished-at="2023-05-17T12:50:08 IST" duration-ms="3384">
+      <class name="restAssured.PojoClassTests.Serialize2">
+        <test-method signature="addPlace()[pri:0, instance:restAssured.PojoClassTests.Serialize2@58d75e99]" started-at="2023-05-17T12:50:04 IST" name="addPlace" finished-at="2023-05-17T12:50:08 IST" duration-ms="3312" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- responseTime -->
-      </class> <!-- QAs.ResponseTimeValidation -->
+        </test-method> <!-- addPlace -->
+      </class> <!-- restAssured.PojoClassTests.Serialize2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
