@@ -3,3 +3,32 @@ Ans: Hooks are blocks of code that can run at various points in the Cucumber exe
 They are typically used for setup and teardown of the environment before and after each scenario. 
 Where a hook is defined has no impact on what scenarios or steps it is run for.
 
+1. GlobalProperties.properties
+baseURI=https://frictionlessapi-uat.parking.com/Prod
+micrositeId=618c0bcf-e9a3-11ea-8fd2-124c6afa5063
+
+2. Extra Scenarios:
+Note that accounts will display all vehicles and offer the ability to edit all vehicles on the account as they do today regardless of how many vehicles exist on the account.  
+
+Scenario 1: Display Vehicle Limit Error for Accounts with More than 15 vehicles
+Given that a user has a valid account on Parking.com
+And is adding Vehicles to their account for the first time
+When the user tries adding vehicle #16 or more. 
+Then the system displays the Vehicle limit error - "You can only have 15 vehicles on your account.  Please remove a vehicle before adding a new one."
+
+Scenario 2: Do Not Display Vehicle Limit Error for Newly Created Accounts with less than 15 vehicles
+Given that a user is adding vehicles to their newly created account 
+When the user tries adding 15 vehicles OR less 
+Then the system should not display the Vehicle limit error.
+
+Scenario 3: Do Not Display Vehicle Limit Error for Existing Accounts with more than 15 vehicles
+Given that a user has an existing account on Parking.com
+And the user had more than 15 vehicles added to their account
+When the user navigates to the "Manage Vehicles' page
+Then the system should not display the Vehicle limit error.
+
+Scenario 4: Display Vehicle Limit Error for Existing Accounts with less than 15 vehicles BUT trying to add more vehicles
+Given that a user has an existing account on Parking.com
+And the user had 15 vehicles or less added to their account
+
+
